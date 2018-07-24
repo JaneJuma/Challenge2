@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap-theme.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap-theme.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+	<title>Bucketlist</title>
+</head>
+<body style="background-color: #fff;">
+	<div class="container">
+		<div class="bar">
+			<h2 class="title">View All Bucketlist</h2>
+		</div><!-- bar -->
+		<div class="row add">
+			<div class="col-md-2 adddiv">
+				<button class="addbtn"type="button"><a style="color: #000;"href="{{ url_for('addlist') }}">ADD LIST</a></button>
+			</div>
+			<div class="col-md-10"></div>
+		</div><!-- add -->
+
+			<div class="table">
+				<div class="row">
+				<div class="col-md-3">
+					<th>List Title</th>
+					
+				</div>
+				<div class="col-md-3">
+					<th>Description</th>
+
+				</div>
+				<div class="col-md-3">
+					<th>Date created</th>
+				</div>
+				<div class="col-md-3">
+				<th>Action</th>
+				
+				</div>
+				</div><!-- row -->
+
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-3"></div>
+					<div class="col-md-3"></div>
+					<div class="col-md-3 action">
+					 <button style="background-color: blue; border: none;"type="button"><a style="color: #000;"href="{{ url_for('viewlist') }}">view</a></button>
+					 <button style="background-color: green; border: none;"type="button"><a style="color: #000;" href="{{ url_for('update') }}">edit</a></button>
+					 <button style="color: #000; background-color: red; border: none;" type="button">delete</a></button>
+					</div>
+
+				</div>
+			</div><!-- table -->
+
+			<div class="bar"></div>
+		
+	</div><!-- container -->
+
+	<!-- java -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+</html>
