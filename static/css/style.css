@@ -4,7 +4,7 @@
 }
 
 .account{
-	color: #fff;
+	color: #000;
 	text-align: center;
 }
 
@@ -36,7 +36,6 @@ body{
         color: #ff7200;
 		width: 100%;
 		border: none;
-
 }
 
 .btn {        

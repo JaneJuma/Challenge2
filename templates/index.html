@@ -1,6 +1,7 @@
 
-
 <!DOCTYPE html>
+{% from "formhelpers.html" import render_field %}
+
 <html>
 <head>
 	<title>Login Form</title>
@@ -17,18 +18,18 @@
 
 <div class="login-form">
 	
-<form><center>
+<form method="POST" action="/login_validation"><center>
 
-<h2 class="text-center">Log in</h2>     	
 
+<h2 class="text-center">Log in</h2>
 
 <div class="email">
-	 <input type="text" class="input" name="email" placeholder="Email">
+	<input type="text" class="input" name="email" placeholder="Email" required>
 </div><!-- email -->
 <br>
 
 <div class="password">
-	 <input type="password" class="input" name="password" placeholder="Password">
+	<input type="password" class="input" name="password" placeholder="Password" required>
 </div><!-- password -->
 
 <div class="submit">
@@ -36,11 +37,13 @@
 
 </div><!-- submit -->
 
+
 </form><!-- form -->
 
 </div><!-- loginform -->
 
- <p class="text-center account">You do not have account??<a style="color: #89ae4d;"href="{{ url_for('registration') }}"><br>Register</a></p>
+
+ <p style="color: #000; font-weight: bolder;" class="text-center account">You do not have account??<a style="color: #89ae4d;"href="{{ url_for('registration') }}"><br>Register</a></p>
 
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

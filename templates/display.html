@@ -11,6 +11,9 @@
 	<title>Bucketlist</title>
 </head>
 <body style="background-color: #fff;">
+
+{% block body %}
+
 	<div class="container">
 		<div class="bar">
 			<h2 class="title">View All Bucketlist</h2>
@@ -22,42 +25,58 @@
 			<div class="col-md-10"></div>
 		</div><!-- add -->
 
-			<div class="table">
-				<div class="row">
-				<div class="col-md-3">
-					<th>List Title</th>
-					
-				</div>
-				<div class="col-md-3">
-					<th>Description</th>
 
-				</div>
-				<div class="col-md-3">
-					<th>Date created</th>
-				</div>
-				<div class="col-md-3">
+    <div class="row">
+		<div class="col-md-12">
+
+		<table class="table table-striped">
+			<tr>
+				<th>List Title</th>
+				<th>Description</th>
+				<th>Date created</th>
 				<th>Action</th>
+			</tr>
+
+			<tr>
+				<td>List</td>
+				<td>Fruits</td>
+				<td>04/12/2018</td>
 				
-				</div>
-				</div><!-- row -->
 
-				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-3"></div>
-					<div class="col-md-3"></div>
-					<div class="col-md-3 action">
-					 <button style="background-color: blue; border: none;"type="button"><a style="color: #000;"href="{{ url_for('viewlist') }}">view</a></button>
-					 <button style="background-color: green; border: none;"type="button"><a style="color: #000;" href="{{ url_for('update') }}">edit</a></button>
-					 <button style="color: #000; background-color: red; border: none;" type="button">delete</a></button>
-					</div>
 
-				</div>
-			</div><!-- table -->
+			    <td>
+				<a href="{{ url_for('viewlist') }}" class="btn-success btn-xs" data-toggle="modal" data-target="#modaledit">View</a>
+				<a href="{{ url_for('update') }}" class="btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+				<a href="#" class="btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete ')">Delete</a>
+				</td>
+		
+			</tr>
 
-			<div class="bar"></div>
+        
+			
+		</table><!--table-->
+
+		</div><!--md-12-->
+		
+
+	</div><!--rowtable-->
+
+
+
+
+
+
+
+
+
+
+
+	<div class="bar"></div>
 		
 	</div><!-- container -->
 
+
+{% endblock %}
 	<!-- java -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
